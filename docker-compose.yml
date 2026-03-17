@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: iyipl_backend
     ports:
-      - "8000:8000"
+      - "9000:8000"
     environment:
       - DATABASE_URL=sqlite:////app/data/iyipl.db
     volumes:
@@ -20,7 +20,7 @@ services:
       dockerfile: Dockerfile
     container_name: iyipl_frontend
     ports:
-      - "80:80"
+      - "9090:80"
     depends_on:
       - backend
     restart: unless-stopped
